@@ -1,5 +1,9 @@
 # hospital_api
 
+### How to setup and use:
+1. After cloning it to the folder, navigate to the folder and type 'npm i'  and press enter to install all the required modules. 
+2. To run the app, type node app.js and copy the url printed on console.
+
 ### Libraries and Framework Used:
 1. **Express Js**: Provides rest api methods and have the most important method ie use() which is used to puts the specified middleware of the modules used.
 2. **cors**: By default, cors is not enabled in nodejs app means client whose origin is different(not in nodejs folder) will not be able to send request or receive response. Using this, CORS is enabled.
@@ -11,3 +15,6 @@
 It checks validity of fields ie address,email, phone_no and password. If these fields are valid then alll data is pushed to table named 'patients' of database  'hospitals'. Patient photo is stored in upload folder saved with random string. So this random string is used to access it or send back to client later. So this pathname is stored in database.
 2. **fetch**('/fetch'):  This URI has payload ie hospital_id. It checks if hospital id is valid. If valid then using functions like count to count the psychiatrists and sum to sum up number of patients, it fetch data from 2 tables psychiatrists(containing records of 50 psychiatrists),hospital(contains records of 4 hospitals). Here hospital_id is foreign key in psychiatrists table so its used to connect to hospital table to get the name of hospital using where clause.
 Also we need records of psychiatrists so we need to records which matches the given hospital id. After the required information is obtained, its stored in object in specified format and sent in json format as response.
+
+#### Postman collection link: 
+https://www.postman.com/universal-satellite-346458/workspace/public-workspace/collection/15667591-9f2b3a5b-791e-472f-a072-4aee81d33f69?ctx=documentation
